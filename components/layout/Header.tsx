@@ -101,6 +101,15 @@ export const Header: React.FC = () => {
                 About
               </Link>
               <Link
+                href="/photography"
+                className={`link-underline text-base font-medium transition-colors ${
+                  pathname === '/photography' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
+                }`}
+                aria-label="Photography"
+              >
+                Photography
+              </Link>
+              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-5 py-2.5 bg-coral-500 text-white font-semibold rounded-lg hover:bg-coral-600 transition-all duration-200 shadow-sm hover:shadow-md"
                 aria-label="Contact"
