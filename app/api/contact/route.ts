@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
+import { writeFile, mkdir, readFile } from 'fs/promises';
+import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
+import sgMail from '@sendgrid/mail';
 
 interface ContactFormData {
   name: string;
@@ -40,9 +42,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Helper function to escape HTML to prevent XSS
+    const escapeHtml = (text: string): string => {
+      const map: { [key: string]: string } = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;',
+      };
+      return text.replace(/[&<>"']/g, (m) => map[m]);
+    };
+
     // If SendGrid is configured, send email
     if (process.env.SENDGRID_API_KEY) {
-      const sgMail = require('@sendgrid/mail');
       sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
       const msg = {
@@ -60,12 +73,12 @@ ${data.message}
         `,
         html: `
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${data.name}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Company:</strong> ${data.company || 'Not provided'}</p>
-          <p><strong>Service Interest:</strong> ${data.service}</p>
+          <p><strong>Name:</strong> ${escapeHtml(data.name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+          <p><strong>Company:</strong> ${escapeHtml(data.company || 'Not provided')}</p>
+          <p><strong>Service Interest:</strong> ${escapeHtml(data.service)}</p>
           <h3>Message:</h3>
-          <p>${data.message.replace(/\n/g, '<br>')}</p>
+          <p>${escapeHtml(data.message).replace(/\n/g, '<br>')}</p>
         `,
       };
 
@@ -84,15 +97,14 @@ ${data.message}
       const submission = {
         ...data,
         timestamp: new Date().toISOString(),
-        id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+        id: `${Date.now()}-${Math.random().toString(36).substring(2, 11)}`,
       };
 
       // Read existing submissions or create new array
       let submissions = [];
       try {
-        const fs = require('fs');
-        if (fs.existsSync(submissionsFile)) {
-          const fileContent = fs.readFileSync(submissionsFile, 'utf8');
+        if (existsSync(submissionsFile)) {
+          const fileContent = readFileSync(submissionsFile, 'utf8');
           submissions = JSON.parse(fileContent);
         }
       } catch (err) {
