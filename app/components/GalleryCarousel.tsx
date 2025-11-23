@@ -51,6 +51,7 @@ const GalleryCarousel: React.FC<GalleryCarouselProps> = ({ images }) => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLightboxOpen]);
 
   // Handle lightbox keyboard navigation
@@ -74,6 +75,7 @@ const GalleryCarousel: React.FC<GalleryCarouselProps> = ({ images }) => {
       window.removeEventListener('keydown', handleLightboxKeyDown);
       document.body.style.overflow = 'unset';
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLightboxOpen, lightboxIndex]);
 
   if (!images || images.length === 0) {

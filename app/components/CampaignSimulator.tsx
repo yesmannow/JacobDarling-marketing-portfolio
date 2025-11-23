@@ -35,6 +35,7 @@ const CampaignSimulator: React.FC = () => {
 
   useEffect(() => {
     calculateResults();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputs]);
 
   const calculateResults = () => {

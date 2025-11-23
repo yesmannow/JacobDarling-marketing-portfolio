@@ -1,0 +1,116 @@
+---
+title: "The Fortress"
+slug: "the-fortress"
+date: "2024-04-05"
+client: "Healthcare E-commerce Platform"
+industry: "E-commerce / Healthcare"
+category: ["Security", "Risk Mitigation"]
+tags: ["Infrastructure Security", "Performance Tuning", "DevOps", "Cloudflare", "Risk Mitigation"]
+hero: "/images/case-studies/the-fortress.svg"
+tagline: "Standing up an edge-first security posture that protects revenue 24/7"
+summary: "Implemented a multi-layered Cloudflare stack with proactive rules and performance tuning, blocking 85K+ threats monthly while improving page speeds by 210%."
+featured: true
+color: "#60A5FA"
+icon: "🛡️"
+metrics:
+  - label: "Threats Blocked"
+    value: "85K+/month"
+    description: "Malicious requests blocked monthly"
+  - label: "Cache Hit Ratio"
+    value: "86%"
+    description: "Requests served from edge cache"
+  - label: "Page Speed"
+    value: "+210%"
+    description: "Improvement in page load times"
+  - label: "Server Load"
+    value: "-50%"
+    description: "Reduction in origin server load"
+---
+
+## The Challenge
+
+Persistent bot attacks and scrapers slowed the storefront, spiked hosting bills, and threatened customer trust.
+
+The team was caught in a losing game of whack-a-mole. Malicious bots pounded wp-login, scrapers hammered the directory, and marketing launches slowed to a crawl whenever attacks spiked. Security and performance were treated separately, so fixes solved one problem and created another.
+
+### Key Issues
+
+- 80% of traffic was non-human noise hitting expensive PHP endpoints
+- Average page load ballooned to 5.8 seconds during attacks
+- Teams paused campaign launches because they feared downtime
+- Reactive security approach couldn't keep pace with threats
+- High hosting costs from malicious traffic
+
+## The Strategy
+
+Implemented a multi-layered Cloudflare stack with proactive rules, observability, and performance tuning at the edge.
+
+I moved the fight to the edge. I designed a layered defence that filtered, cached, and monitored before traffic ever touched WordPress.
+
+### Implementation Approach
+
+**Edge Security Layer**
+- Deployed Cloudflare WAF with custom rules
+- Challenge suspicious behaviour patterns
+- Block credential stuffing attempts
+- Real-time threat intelligence integration
+
+**Bot Management**
+- Rate limiting on sensitive routes
+- Bot management tuned to site's content patterns
+- Automated challenges for suspicious activity
+- Whitelist legitimate crawlers and partners
+
+**Observability & Monitoring**
+- Workers KV logs for detailed traffic analysis
+- Grafana dashboards for real-time visibility
+- Automated alerts piped to Slack
+- Custom metrics for security events
+
+**Origin Optimization**
+- Object caching at origin
+- Image optimization pipeline
+- Queue-based background jobs
+- Reduced PHP endpoint exposure
+
+## The Impact
+
+Revenue-critical experiences stayed fast, safe, and available—even during coordinated attacks.
+
+Security became an enabler. Marketing could ship promotions during peak traffic knowing the platform would hold.
+
+### Measurable Results
+
+**Security Transformation**
+- Blocked 85,000+ malicious hits every month
+- Cut server load in half through intelligent filtering
+- Zero successful credential stuffing attempts
+- Incident response time reduced to under 5 minutes
+
+**Performance Excellence**
+- Edge caching pushed cache-hit ratio to 86%
+- Conversion-critical page speeds improved by 210%
+- Consistent performance during traffic spikes
+- Marketing campaigns launch without infrastructure concerns
+
+**Operational Confidence**
+- Platform maintains availability during attacks
+- Automated playbooks resolve edge anomalies quickly
+- Team focuses on growth, not firefighting
+- Hosting costs reduced despite traffic growth
+
+## Technologies Used
+
+- **CDN & Security:** Cloudflare WAF, Workers, KV
+- **Bot Management:** Cloudflare Bot Management
+- **Monitoring:** Grafana, custom Workers KV logs
+- **Alerting:** Slack integration for real-time notifications
+- **Origin:** Object caching, image optimization
+- **Rate Limiting:** Custom rules for sensitive endpoints
+
+## Key Takeaways
+
+1. **Defense at the Edge:** Moving security to the edge prevents malicious traffic from ever reaching origin servers
+2. **Security + Performance:** Properly implemented security measures can improve performance through intelligent caching
+3. **Observability is Critical:** Real-time monitoring and alerting enable rapid response
+4. **Automation Scales:** Automated defenses handle routine threats, freeing humans for strategic work

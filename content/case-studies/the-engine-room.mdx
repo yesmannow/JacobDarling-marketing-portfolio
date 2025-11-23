@@ -1,0 +1,117 @@
+---
+title: "The Engine Room"
+slug: "the-engine-room"
+date: "2024-06-20"
+client: "Healthcare E-commerce"
+industry: "E-commerce / Healthcare"
+category: ["Performance", "DevOps"]
+tags: ["Server Administration", "Performance Tuning", "DevOps", "PHP", "MySQL"]
+hero: "/images/case-studies/the-engine-room.svg"
+tagline: "Rebuilding the infrastructure so speed and stability become competitive advantages"
+summary: "Optimized the entire stack from servers to CI/CD, reducing page load times from 5.8s to 1.2s and checkout failures by 92% while enabling daily deployments."
+featured: true
+color: "#38BDF8"
+icon: "⚙️"
+metrics:
+  - label: "Page Load Time"
+    value: "5.8s → 1.2s"
+    description: "Average page load improvement"
+  - label: "Checkout Failures"
+    value: "-92%"
+    description: "Reduction in checkout errors"
+  - label: "Deployment Confidence"
+    value: "99%"
+    description: "Success rate from automated health checks"
+  - label: "Deployment Frequency"
+    value: "Daily"
+    description: "From risky monthly to confident daily"
+---
+
+## The Challenge
+
+The flagship ecommerce site creaked under growth. Slow pages, checkout errors, and risky deployments limited sales velocity.
+
+Traffic growth outpaced the infrastructure. Pages took nearly six seconds to load, checkout hiccups cost real revenue, and any code change required an all-hands prayer.
+
+### Key Issues
+
+- Legacy LEMP stack lacked object caching and PHP tuning
+- Manual FTP deployments regularly introduced regressions
+- Error visibility stopped at Apache logs—no observability pipeline
+- Scaling challenges during traffic spikes
+- Fear of breaking production limited innovation
+
+## The Strategy
+
+Optimised the entire stack—from servers to CI/CD—to create a resilient platform that could ship features without fear.
+
+I treated performance and reliability as a product sprint. I rebuilt the foundation and automated the release process.
+
+### Implementation Approach
+
+**Infrastructure Modernization**
+- Provisioned new autoscaling infrastructure
+- Tuned PHP-FPM workers for optimal throughput
+- Implemented Redis object cache
+- Database query optimization
+
+**CI/CD Pipeline**
+- GitHub Actions for automated deployments
+- Automated smoke tests on every push
+- Instant rollback playbooks
+- Blue-green deployment strategy
+
+**Observability Stack**
+- Instrumented with New Relic for application monitoring
+- Sentry for error tracking and alerting
+- Uptime monitors feeding shared war room dashboard
+- Custom metrics for business-critical paths
+
+**Application Optimization**
+- Refactored WooCommerce queries for efficiency
+- Queue workers for heavy tasks (PDF generation, emails)
+- Lazy loading and code splitting
+- Database index optimization
+
+## The Impact
+
+Customers experienced a blazing-fast store while the team gained an always-on release pipeline.
+
+The storefront now feels instant, support no longer braces for outages, and marketing can launch without negotiating with engineering.
+
+### Measurable Results
+
+**Performance Transformation**
+- Average page load time dropped from 5.8 seconds to 1.2 seconds
+- Conversion-critical pages load in under 1 second
+- Consistent performance during traffic spikes
+- Mobile experience dramatically improved
+
+**Reliability Excellence**
+- Checkout failures plummeted 92% thanks to better scaling
+- Zero unplanned downtime in 12 months
+- Automated health checks catch issues before users do
+- Graceful degradation during peak loads
+
+**Development Velocity**
+- Deployments happen daily with 99% confidence score
+- Feature development accelerated by 3x
+- Rollbacks take seconds, not hours
+- Team ships fearlessly with safety nets in place
+
+## Technologies Used
+
+- **Infrastructure:** Autoscaling LEMP stack
+- **Caching:** Redis object cache, edge caching
+- **CI/CD:** GitHub Actions, automated testing
+- **Monitoring:** New Relic, Sentry, custom uptime monitors
+- **Queue System:** Background workers for async tasks
+- **Database:** MySQL with query optimization
+- **PHP:** PHP-FPM with performance tuning
+
+## Key Takeaways
+
+1. **Performance is a Feature:** Fast load times directly impact conversion rates and revenue
+2. **Automation Enables Confidence:** Automated testing and deployment remove fear from shipping
+3. **Observability is Non-Negotiable:** You can't fix what you can't see—instrument everything
+4. **Infrastructure as Product:** Treat infrastructure like a product that enables business outcomes
