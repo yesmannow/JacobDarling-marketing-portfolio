@@ -45,53 +45,80 @@ export const Header: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-6">
               <Link
                 href="/"
                 className={`link-underline text-base font-medium transition-colors ${
                   pathname === '/' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
                 }`}
+                aria-label="Home"
               >
                 Home
               </Link>
               <Link
-                href="/portfolio"
+                href="/work"
                 className={`link-underline text-base font-medium transition-colors ${
-                  pathname === '/portfolio' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
+                  pathname === '/work' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
                 }`}
+                aria-label="Work"
               >
-                Portfolio
+                Work
               </Link>
               <Link
                 href="/case-studies"
                 className={`link-underline text-base font-medium transition-colors ${
                   pathname?.startsWith('/case-studies') ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
                 }`}
+                aria-label="Case Studies"
               >
                 Case Studies
-              </Link>
-              <Link
-                href="/about"
-                className={`link-underline text-base font-medium transition-colors ${
-                  pathname === '/about' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
-                }`}
-              >
-                About
               </Link>
               <Link
                 href="/services"
                 className={`link-underline text-base font-medium transition-colors ${
                   pathname === '/services' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
                 }`}
+                aria-label="Services"
               >
                 Services
               </Link>
               <Link
+                href="/insights"
+                className={`link-underline text-base font-medium transition-colors ${
+                  pathname === '/insights' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
+                }`}
+                aria-label="Insights"
+              >
+                Insights
+              </Link>
+              <Link
+                href="/about"
+                className={`link-underline text-base font-medium transition-colors ${
+                  pathname === '/about' ? 'text-navy-900' : 'text-neutral-700 hover:text-navy-900'
+                }`}
+                aria-label="About"
+              >
+                About
+              </Link>
+              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-5 py-2.5 bg-coral-500 text-white font-semibold rounded-lg hover:bg-coral-600 transition-all duration-200 shadow-sm hover:shadow-md"
+                aria-label="Contact"
               >
                 Contact
               </Link>
+              <a
+                href="/resume.pdf"
+                className="inline-flex items-center justify-center px-4 py-2 text-navy-700 hover:text-navy-900 font-medium transition-colors border border-navy-300 rounded-lg hover:border-navy-500"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Resume (opens in new tab)"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Resume
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
