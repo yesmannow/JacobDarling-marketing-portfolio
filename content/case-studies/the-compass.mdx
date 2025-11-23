@@ -1,0 +1,110 @@
+---
+title: "The Compass"
+slug: "the-compass"
+date: "2024-03-10"
+client: "Healthcare E-commerce"
+industry: "Healthcare / E-commerce"
+category: ["Analytics", "Data Strategy"]
+tags: ["Analytics Engineering", "Data Integrity", "Conversion Rate Optimization", "Performance Marketing", "GTM"]
+hero: "/images/case-studies/the-compass.svg"
+tagline: "Rebuilding analytics and attribution so every dollar is accountable"
+summary: "Engineered an analytics pipeline that unified web, CRM, and finance data, improving attribution accuracy by 46 percentage points and CAC efficiency by 32%."
+featured: true
+color: "#34D399"
+icon: "🧭"
+metrics:
+  - label: "Attribution Accuracy"
+    value: "+46 pts"
+    description: "Improvement in attribution accuracy"
+  - label: "CAC Efficiency"
+    value: "+32%"
+    description: "Improvement in Customer Acquisition Cost"
+  - label: "Revenue Visibility"
+    value: "Full Funnel"
+    description: "Complete visibility from first touch to revenue"
+  - label: "Reconciliation Time"
+    value: "Hours → Minutes"
+    description: "Finance reconciliation speed"
+---
+
+## The Challenge
+
+Leadership made six-figure decisions without reliable attribution. Data lived in silos and nothing reconciled.
+
+Reporting conversations felt like guesswork. GA4, WooCommerce, and the CRM all disagreed on revenue. Finance pulled numbers from QuickBooks, marketing exported spreadsheets, and nobody trusted any of it. Without a shared truth the team flew blind when planning campaigns or forecasting inventory.
+
+### Key Issues
+
+- Duplicate and unclassified traffic sources made attribution meaningless
+- Cohort retention was invisible because transactional data never met lifecycle tags
+- Executives spent hours reconciling numbers every quarter
+- No single source of truth for revenue reporting
+- Marketing decisions based on incomplete or conflicting data
+
+## The Strategy
+
+Engineered an analytics pipeline that unified web, CRM, and finance data with rock-solid governance and storytelling dashboards.
+
+I treated analytics like a product. I documented the questions leaders needed answered, then built the plumbing to answer them daily.
+
+### Implementation Approach
+
+**Event Model Architecture**
+- Implemented first-party event model in GTM
+- 60+ custom events aligned to lifecycle milestones
+- Consistent naming conventions across all platforms
+
+**Data Warehouse Integration**
+- Streamed orders and subscription events into Snowflake warehouse
+- Resolved customer identities across platforms
+- Single source of truth for all revenue data
+
+**Data Transformation Layer**
+- Authored dbt models for trustworthy revenue, LTV, and funnel views
+- Automated QA checks on data quality
+- Version-controlled data transformations
+
+**Executive Dashboards**
+- Story-first narratives in Looker Studio
+- Visualized momentum, risks, and next actions
+- Self-service access to key metrics
+- Automated daily refreshes
+
+## The Impact
+
+Marketing finally operated with instrumentation-grade clarity and could optimise spend in real time.
+
+Within one quarter marketing decisions shifted from feelings to forecasts. Budget moved to the channels that won, and experiments were decided in days instead of months.
+
+### Measurable Results
+
+**Attribution & Efficiency**
+- Attribution accuracy improved by 46 percentage points
+- CAC efficiency climbed 32% through better channel allocation
+- ROI transparency enabled confident investment decisions
+
+**Operational Excellence**
+- Weekly growth council runs on dashboards blending spend, pipeline, and revenue
+- Finance reconciles to marketing within minutes—no more midnight spreadsheets
+- Data-driven culture replaced opinion-based planning
+
+**Strategic Impact**
+- Campaign optimization cycles shortened from months to days
+- Budget allocation became data-driven and defensible
+- Full-funnel visibility from first touch to revenue
+
+## Technologies Used
+
+- **Analytics Platform:** Google Analytics 4, Google Tag Manager
+- **Data Warehouse:** Snowflake
+- **Transformation:** dbt (data build tool)
+- **Visualization:** Looker Studio
+- **E-commerce:** WooCommerce event streaming
+- **CRM Integration:** Cross-platform identity resolution
+
+## Key Takeaways
+
+1. **Treat Analytics as a Product:** Document stakeholder questions first, then build infrastructure to answer them
+2. **Single Source of Truth:** Unified data warehouse eliminates reconciliation nightmares
+3. **Automated Quality Checks:** dbt models with QA prevent bad data from reaching dashboards
+4. **Story-First Dashboards:** Visualization should tell a story, not just display numbers

@@ -72,7 +72,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Navigation Links */}
-          <nav className="space-y-1">
+          <nav className="space-y-1" aria-label="Mobile navigation">
             <Link
               href="/"
               className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
@@ -81,20 +81,22 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   : 'text-neutral-700 hover:bg-neutral-50'
               }`}
               onClick={onClose}
+              aria-label="Home"
             >
               Home
             </Link>
 
             <Link
-              href="/portfolio"
+              href="/work"
               className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
-                pathname === '/portfolio'
+                pathname === '/work'
                   ? 'bg-navy-50 text-navy-900'
                   : 'text-neutral-700 hover:bg-neutral-50'
               }`}
               onClick={onClose}
+              aria-label="Work"
             >
-              Portfolio
+              Work
             </Link>
 
             {/* Case Studies Accordion */}
@@ -175,6 +177,19 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             </AccordionItem>
 
             <Link
+              href="/insights"
+              className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
+                pathname === '/insights'
+                  ? 'bg-navy-50 text-navy-900'
+                  : 'text-neutral-700 hover:bg-neutral-50'
+              }`}
+              onClick={onClose}
+              aria-label="Insights"
+            >
+              Insights
+            </Link>
+
+            <Link
               href="/about"
               className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
                 pathname === '/about'
@@ -182,20 +197,35 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                   : 'text-neutral-700 hover:bg-neutral-50'
               }`}
               onClick={onClose}
+              aria-label="About"
             >
               About
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="mt-8">
+          {/* CTA Buttons */}
+          <div className="mt-8 space-y-3">
             <Link
               href="/contact"
               className="block w-full py-3 px-6 bg-coral-500 text-white font-semibold text-center rounded-lg hover:bg-coral-600 transition-colors shadow-md"
               onClick={onClose}
+              aria-label="Contact"
             >
               Get In Touch
             </Link>
+            <a
+              href="/resume.pdf"
+              className="flex items-center justify-center w-full py-3 px-6 text-navy-700 font-semibold text-center rounded-lg border border-navy-300 hover:border-navy-500 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onClose}
+              aria-label="Download Resume (opens in new tab)"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Resume
+            </a>
           </div>
 
           {/* Additional Info */}
