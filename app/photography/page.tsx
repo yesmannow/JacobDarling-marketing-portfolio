@@ -107,7 +107,7 @@ export default async function PhotographyPage() {
       <Section className="py-16 bg-gradient-to-b from-navy-50 to-aqua-50">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-display font-bold text-navy-900 mb-4">
-            Let's Work Together
+            Start a Conversation
           </h2>
           <p className="text-lg text-neutral-700 mb-8">
             Interested in discussing marketing strategy, content creation, or just want to chat about photography?
@@ -116,9 +116,9 @@ export default async function PhotographyPage() {
             <a
               href="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-coral-500 text-white font-semibold text-lg rounded-lg hover:bg-coral-600 transition-all duration-200 shadow-md hover:shadow-lg"
-              aria-label="Get in touch"
+              aria-label="Contact me"
             >
-              Get In Touch
+              Contact Me
             </a>
             <a
               href="/work"

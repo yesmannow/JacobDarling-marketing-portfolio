@@ -256,6 +256,18 @@ The following redirects have been added to `vercel.json` (in the new repository 
 
 ## Next Steps / Follow-up Items
 
+### Phase 1 Complete - Site Restructure (Current PR)
+- [x] Update contact information (Footer, Contact page, structured data)
+- [x] Convert agency voice to personal voice (CTAs updated)
+- [x] Add redirects configuration (vercel.json)
+- [x] Create API route for contact form (/api/contact)
+- [x] Add JSON-LD structured data (Person schema)
+- [x] Implement honeypot spam protection
+- [x] Add phone display with env toggle
+- [x] Create helper script for redirects
+- [x] Update content inventory with redirects
+- [x] Verify no banned agency phrases remain
+
 ### Phase 2 - Additional Content (Future PRs)
 - [ ] Migrate 3 insights/blog posts
 - [ ] Add homepage hero content

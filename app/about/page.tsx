@@ -150,14 +150,14 @@ export default function About() {
       <Section background="navy" padding="lg">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-display-sm font-display font-bold mb-6">
-            Let's Work Together
+            Start a Conversation
           </h2>
           <p className="text-xl text-aqua-100 mb-8">
             Ready to discuss how strategic marketing can help your business grow?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/contact" size="lg" variant="primary">
-              Get In Touch
+              Contact Me
             </Button>
             <Button href="/portfolio" size="lg" variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-navy-900">
               View My Work
