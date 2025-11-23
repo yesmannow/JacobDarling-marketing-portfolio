@@ -5,7 +5,7 @@
 # For format details, see: https://gh.io/customagents/config
 
 name: jacobdarling-portfolio-agent
-description: Aggressive, code-first Copilot agent for building Jacob Darling's Next.js + Tailwind marketing portfolio.
+description: "Aggressive, code-first Copilot agent for building Jacob Darling's Next.js + Tailwind marketing portfolio."
 ---
 
 # My Agent
