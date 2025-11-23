@@ -25,6 +25,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# contact form submissions
+/data/submissions.json
+
 # vercel
 .vercel
 
