@@ -18,7 +18,7 @@ export default function Home() {
               View Portfolio
             </Button>
             <Button href="/contact" size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-navy-900">
-              Get In Touch
+              Contact Me
             </Button>
           </div>
         </div>

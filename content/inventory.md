@@ -235,7 +235,38 @@ All images are SVG icons referenced in case studies. Total size: < 1MB
 
 ---
 
+## Redirects Implemented
+
+The following redirects have been added to `vercel.json` (in the new repository only):
+
+| Old Path | New Path | Type | Priority | Source |
+|----------|----------|------|----------|--------|
+| `/index.html` | `/` | 301 | High | Old site homepage |
+| `/portfolio.html` | `/portfolio` | 301 | High | Old portfolio page |
+| `/case-study/:slug` | `/case-studies/:slug` | 301 | High | Old case study URLs |
+| `/services.html` | `/services` | 301 | High | Old services page |
+| `/about.html` | `/about` | 301 | High | Old about page |
+| `/contact.html` | `/contact` | 301 | High | Old contact page |
+| `/insights.html` | `/insights` | 301 | Medium | Old blog/insights |
+| `/blog` | `/insights` | 301 | Medium | Alternative blog URL |
+
+**Important:** These redirects are implemented in the new site repository (`yesmannow/JacobDarling-marketing-portfolio`) only and do NOT affect bearcavemarketing.com or any external domain settings. They are for routing within the new site only.
+
+---
+
 ## Next Steps / Follow-up Items
+
+### Phase 1 Complete - Site Restructure (Current PR)
+- [x] Update contact information (Footer, Contact page, structured data)
+- [x] Convert agency voice to personal voice (CTAs updated)
+- [x] Add redirects configuration (vercel.json)
+- [x] Create API route for contact form (/api/contact)
+- [x] Add JSON-LD structured data (Person schema)
+- [x] Implement honeypot spam protection
+- [x] Add phone display with env toggle
+- [x] Create helper script for redirects
+- [x] Update content inventory with redirects
+- [x] Verify no banned agency phrases remain
 
 ### Phase 2 - Additional Content (Future PRs)
 - [ ] Migrate 3 insights/blog posts
