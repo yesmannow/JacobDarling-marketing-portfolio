@@ -201,6 +201,19 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             >
               About
             </Link>
+
+            <Link
+              href="/photography"
+              className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
+                pathname === '/photography'
+                  ? 'bg-navy-50 text-navy-900'
+                  : 'text-neutral-700 hover:bg-neutral-50'
+              }`}
+              onClick={onClose}
+              aria-label="Photography"
+            >
+              Photography
+            </Link>
           </nav>
 
           {/* CTA Buttons */}
